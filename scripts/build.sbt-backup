@@ -1,0 +1,59 @@
+
+name := "secure-wifi-server-akka-slick"
+
+version := "1.0"
+
+scalaVersion := "2.11.12"
+
+val akkaVersion = "10.0.11"
+
+
+libraryDependencies ++= Seq(
+	"com.typesafe.akka" %% "akka-http-core" % akkaVersion,
+	"com.typesafe.akka" %% "akka-http" % akkaVersion,
+	"com.typesafe.akka" %% "akka-http-spray-json" % akkaVersion,
+
+	"com.typesafe.akka" %% "akka-stream-kafka" % "0.18",
+	//--  "io.dropwizard"     %% "dropwizard-core" % "1.2.0",
+	//	"com.datasift.dropwizard.scala" %% "dropwizard-scala-core" % "1.0.0-1",
+	//	"org.slf4j" % "log4j-over-slf4j" % "1.7.12",
+	//	"org.slf4j" % "slf4j-nop" % "1.7.12",
+
+	"ch.qos.logback" % "logback-classic" % "1.2.3",
+	"com.typesafe.akka" % "akka-slf4j_2.11" % "2.4.8",
+
+	"redis.clients" % "jedis" % "2.9.0",
+
+	"com.zaxxer" % "HikariCP" % "2.7.5",
+
+	"com.typesafe.slick" %% "slick" % "3.2.0",
+
+	"com.typesafe.slick" %% "slick-hikaricp" % "3.2.0",
+
+	"org.mariadb.jdbc" % "mariadb-java-client" % "2.1.2",
+
+	"mysql" % "mysql-connector-java" % "5.1.36"
+)
+
+mainClass in Compile := Some("WifiReceiverMain")
+mainClass in assembly := Some("WifiReceiverMain")
+assemblyJarName in assembly := "secure-wifi-server-as.jar"
+
+//assemblyMergeStrategy in assembly := {
+//	case PathList("META-INF", xs @ _*) => MergeStrategy.discard
+//	case "reference.conf => MergeStrategy.concat
+//	case x => MergeStrategy.first
+//}
+
+//libraryDependencies ++=Seq(
+//	"org.apache.kafka"              %       "kafka-clients"               %   "0.9.0.0",
+//	"com.typesafe.play"             %       "play-json_2.11"              %   "2.4.6",
+//	"com.google.guava"              %       "guava"                       %   "19.0"
+//)
+//val  AllLibraryDependencies = Seq(
+//	"com.typesafe.akka" % "akka-actor_2.11" % "2.4.12",
+//	"com.typesafe.akka" % "akka-http_2.11" % "3.0.0-RC1",
+//	"com.typesafe.akka" % "akka-http-core_2.11" % "3.0.0-RC1",
+//	"com.typesafe.akka" % "akka-http-spray-json_2.11" % "3.0.0-RC1"
+//)
+

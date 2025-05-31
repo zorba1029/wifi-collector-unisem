@@ -1,0 +1,63 @@
+# macOS 시스템 파일
+.DS_Store
+.AppleDouble
+.LSOverride
+Thumbs.db
+
+# SBT 관련
+target/
+project/target/
+project/project/
+.cache-*
+.history
+.lib/
+dist/
+.scala_dependencies
+.worksheet
+
+# IDE 관련
+.idea/
+*.iml
+*.ipr
+*.iws
+# .vscode/
+# .metals/
+.bloop/
+project/.bloop/
+
+# Gradle 관련
+.gradle/
+build/
+
+# Maven 관련
+.maven/
+
+# 로그 파일
+*.log
+logs/
+application.log
+
+# 임시 파일
+*.tmp
+*.swp
+*~
+*.bak
+*.backup
+
+# 테스트 관련
+test-output/
+.scalatest/
+
+# 환경 설정 파일
+.env
+.env.local
+
+# 커버리지 리포트
+target/scala-*/scoverage-data/
+target/scala-*/scoverage-report/
+
+# 기타 빌드 관련
+.classpath
+.project
+.settings/
+bin/
