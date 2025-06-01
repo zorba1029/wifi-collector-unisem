@@ -1,8 +1,8 @@
 /**
-	* Copyright (C) 2018 Unisem Inc. <http://www.unisem.co.kr>
-	*
-	* Created by Heung-Mook CHOI (zorba)
-	*/
+* Copyright (C) 2018 Unisem Inc. <http://www.unisem.co.kr>
+*
+* Created by Heung-Mook CHOI (zorba)
+*/
 package com.unisem.metrobus.collector.actors
 
 import java.io.IOException
@@ -289,7 +289,6 @@ class ConsumerActor(stationUpdateActor: ActorRef, producerActor: ActorRef, passe
 					case _ =>
 						// Nothing
 				}
-
 				recList
 
 			case None =>
@@ -297,7 +296,6 @@ class ConsumerActor(stationUpdateActor: ActorRef, producerActor: ActorRef, passe
 				emptyDevRecordList
 		}
 	}
-
 }
 
 
